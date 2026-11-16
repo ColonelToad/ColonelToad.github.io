@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ColonelToad.github.io/sitemap.xml
