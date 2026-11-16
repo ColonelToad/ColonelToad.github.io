@@ -2,12 +2,12 @@ import { About, Blog, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Christopher",
+  lastName: "Onyiuke",
+  name: `Christopher Onyiuke`,
+  role: "Software Engineer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
+  email: "chrisonyiuke@gmail.com",
   location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
 };
@@ -25,25 +25,19 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/coloneltoad",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/christopheronyiuke/",
     essential: true,
   },
   {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    name: "Blog",
+    icon: "globe",
+    link: "https://christopheronyiuke.substack.com/",
     essential: true,
   },
   {
@@ -76,7 +70,7 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    I'm Christopher, a software engineer building intuitive products and open source tools. After hours, I write about engineering and design.
 </>
   ),
 };
@@ -102,9 +96,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Christopher is a software engineer with a passion for building simple, elegant design solutions. His work spans digital interfaces, interactive experiences, and open source software.
       </>
     ),
   },
