@@ -223,6 +223,26 @@ export interface Blog extends BasePageConfig {}
  */
 export interface Work extends BasePageConfig {}
 
+/** Open source page configuration.
+ * @description Configuration for the Open Source page, including metadata, navigation label, and project list.
+ */
+export interface Oss extends BasePageConfig {
+  projects: Array<{
+    /** Project name */
+    name: string;
+    /** Short description */
+    description: string;
+    /** Link to the repository or project page */
+    link: string;
+    /** Number of stars (displayed) */
+    stars: number;
+    /** Primary language */
+    language: string;
+    /** Tags for filtering/display */
+    tags: string[];
+  }>;
+}
+
 /**
  * Gallery page configuration.
  * @description Configuration for the Gallery page, including metadata, navigation label, and image list.

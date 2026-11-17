@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 
-import { routes, display, person, about, blog, work } from "@/resources";
+import { routes, display, person, about, blog, work, oss } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
 
@@ -147,7 +147,26 @@ export const Header = () => {
                   </Row>
                 </>
               )}
-              {display.themeSwitcher && (
+              {routes["/oss"] && (
+                <>
+                  <Row s={{ hide: true }}>
+                    <ToggleButton
+                      prefixIcon="rocket"
+                      href="/oss"
+                      label={oss.label}
+                      selected={pathname.startsWith("/oss")}
+                    />
+                  </Row>
+                  <Row hide s={{ hide: false }}>
+                    <ToggleButton
+                      prefixIcon="rocket"
+                      href="/oss"
+                      label={oss.label}
+                      selected={pathname.startsWith("/oss")}
+                    />
+                  </Row>
+                </>
+              )}              {display.themeSwitcher && (
                 <>
                   <Line background="neutral-alpha-medium" vert maxHeight="24" />
                   <ThemeToggle />
@@ -173,3 +192,4 @@ export const Header = () => {
     </>
   );
 };
+

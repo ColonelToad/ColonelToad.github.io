@@ -1,4 +1,4 @@
-import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text, Row } from "@once-ui-system/core";
 import { Mailchimp } from "@/components";
 import { Posts } from "@/components/blog/Posts";
 import { baseURL, blog, person, newsletter } from "@/resources";
@@ -29,6 +29,14 @@ export default function Blog() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
+      <Column fillWidth gap="40" marginTop="24" marginBottom="l">
+        <Row gap="16" vertical="center">
+          <Text variant="label-strong-m">Subscribe via RSS</Text>
+          <a href="https://christopheronyiuke.substack.com/feed" target="_blank" rel="noopener noreferrer">
+            https://christopheronyiuke.substack.com/feed
+          </a>
+        </Row>
+      </Column>
       <Heading marginBottom="l" variant="heading-strong-xl" marginLeft="24">
         {blog.title}
       </Heading>

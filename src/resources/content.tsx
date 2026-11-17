@@ -1,4 +1,4 @@
-import { About, Blog, Home, Newsletter, Person, Social, Work } from "@/types";
+import { About, Blog, Home, Newsletter, Oss, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
@@ -8,7 +8,7 @@ const person: Person = {
   role: "Software Engineer",
   avatar: "/images/avatar.jpg",
   email: "chrisonyiuke@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  location: "America/New_York", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
 };
 
@@ -96,7 +96,10 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Christopher is a software engineer with a passion for building simple, elegant design solutions. His work spans digital interfaces, interactive experiences, and open source software.
+        Christopher is a software engineer based in Orlando, Florida, building intuitive
+        products and open source tools. He writes about engineering and design on{" "}
+        <a href="https://christopheronyiuke.substack.com/">Substack</a>. Open to remote
+        roles and relocation across the US.
       </>
     ),
   },
@@ -238,8 +241,25 @@ const work: Work = {
   label: "Work",
   title: `Projects – ${person.name}`,
   description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
+  // Create new project pages by adding a new .mdx file to app/work/projects
   // All projects will be listed on the /home and /work routes
 };
 
-export { person, social, newsletter, home, about, blog, work };
+const oss: Oss = {
+  path: "/oss",
+  label: "OSS",
+  title: `Open Source – ${person.name}`,
+  description: `Open source projects by ${person.name}`,
+  projects: [
+    {
+      name: "Example OSS Project",
+      description: "A brief description of what this open source project does.",
+      link: "https://github.com/coloneltoad/example-oss",
+      stars: 0,
+      language: "TypeScript",
+      tags: ["nextjs", "react", "oss"],
+    },
+  ],
+};
+
+export { person, social, newsletter, home, about, blog, work, oss };
